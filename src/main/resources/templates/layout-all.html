@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Layout name</th>
+            <th>Coordinates</th>
+        </tr>
+        </thead>
+        <tbody>
+<!--        <tr th:if="${allLayouts}">-->
+<!--            <td colspan="2"> No available layouts  </td>-->
+<!--        </tr>-->
+        <tr th:each="layout : ${allLayouts}">
+            <td><span th:text="${layout.name}"></span></td>
+            <td><span th:text="${layout.points}"></span></td>
+            <td><a th:href="@{layout/{layoutId}(layoutId=${layout.id})}">Show layout</a></td>
+            <td><a th:href="@{remove/{layoutId}(layoutId=${layout.id})}">Delete</a></td>
+
+        </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

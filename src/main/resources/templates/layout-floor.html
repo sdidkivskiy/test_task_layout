@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div> class="container mt-5">
+    <h1>Координати кімнати</h1>
+    <form action="/layout/add" method="post">
+        <input type="text" name="name" placeholder="Ведіть назву макету" class="form-control">
+        <textarea name="point" placeholder="Введіть координати в форматі (a1, b1), (a2, b2), (a3, b3), (a4, b4)" class="form-control"></textarea>
+        <button type="submit" class="btn btn-success">Намалювати</button>
+    </form>
+</div>
+</body>
+</html>
